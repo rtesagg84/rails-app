@@ -1,1 +1,1 @@
-# rails-app
+#This  app will be creating the rails project
