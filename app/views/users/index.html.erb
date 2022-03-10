@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+  
+<html>
+    <head>
+        <title>
+              
+        </title>
+    </head>
+      
+    <body>
+       
+        <h1>Login</h1>
+        <form action="/sessions" method ="POST">
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>"/>
+        <input type="email" name="login[email]" paceholder="email"/>
+        <input type="password" name="login[password]" paceholder="password"/>
+        <input type="submit" name="submit" class="submit"/>
+        </form>
+         <%= link_to 'SignUp', signup_path %>
+    </body>
+</html>
