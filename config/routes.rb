@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     post '/sessions' => 'sessions#create'
     get 'signup' => 'users#new', as: 'signup'
     get '/dashboard' => 'shops#index'
-    # get /me  => "users#show" #for authentication on front end.
-    # delete '/logout' =>"sessions/destroy"
+    get 'logout', to: 'sessions#destroy', as: 'logout'
+    get 'delete', to: 'users#destroy', as: 'delete'
 
   # resources :sessions, only: [:create]
   # resources :users
@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   # get :logged_in, to: "sessions#logged_in"
   
   # root to: "static#home"
+  
 end

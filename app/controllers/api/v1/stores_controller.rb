@@ -1,14 +1,15 @@
-class StoresController < ApplicationController
-  before_action :set_store, only: %i[ show edit update destroy ]
+class Api::V1::StoresController < ApplicationController
+   before_action :set_store, only: %i[ show edit update destroy ]
 
   # GET /stores or /stores.json
   def index
     @stores = Store.all
-    # render json: @stores, status: :ok  
+    render json: @stores, status: :ok  
   end
 
   # GET /stores/1 or /stores/1.json
   def show
+    render json: @stores, status: :ok  
   end
 
   # GET /stores/new

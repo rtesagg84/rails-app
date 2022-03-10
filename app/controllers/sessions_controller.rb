@@ -11,14 +11,17 @@ class SessionsController < ApplicationController
             redirect_to '/'
        end
    end
+   #adding destroy to logout other method 
+   def destroy
+    session[:user_id] = nil
+    redirect_to '/', notice: "Logged out!"
+  end
+ 
     private
     def loging_params
         params.require(:login).permit(:email, :password)
     end
-    #adding destroy to logout other method 
-    def destroy
-        session.delete :user_id
-    end 
+    
 end
 
 # class SessionsController < ApplicationController
