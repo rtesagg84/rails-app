@@ -4,7 +4,7 @@ class PricesController < ApplicationController
   # GET /prices or /prices.json
   def index
     @prices = Price.all
-    render json: @prices, status: :ok  
+    # render json: @prices, status: :ok  
   end
 
   # GET /prices/1 or /prices/1.json
